@@ -1,12 +1,12 @@
 import pytest
 from game_of_greed.game_logic import Banker
 
-# pytestmark = [pytest.mark.version_1]
-
+pytestmark = [pytest.mark.version_1]
 
 
 def test_banker():
     assert Banker()
+
 
 def test_new_banker():
     banker = Banker()
@@ -27,6 +27,7 @@ def test_shelf_1():
     assert banker.shelved == 102
     assert banker.balance == 0
 
+
 def test_deposit():
     banker = Banker()
     banker.shelf(100)
@@ -41,6 +42,7 @@ def test_deposit_1():
     banker.bank()
     assert banker.shelved == 0
     assert banker.balance == 1010
+
 
 def test_clear_shelf():
     banker = Banker()
