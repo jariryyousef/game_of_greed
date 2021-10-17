@@ -37,16 +37,26 @@ def test_deposit():
 
 def test_deposit_1():
     banker = Banker()
-    banker.shelf(100)
+    banker.shelf(1010)
     banker.bank()
     assert banker.shelved == 0
-    assert banker.balance == 100
+    assert banker.balance == 1010
 
-# def test_clear_shelf():
-#     banker = Banker()
-#     banker.shelf(100)
-#     banker.bank()
-#     banker.shelf(50)
-#     banker.clear_shelf()
-#     assert banker.balance == 100
-#     assert banker.shelved == 0
+def test_clear_shelf():
+    banker = Banker()
+    banker.shelf(100)
+    banker.bank()
+    banker.shelf(50)
+    banker.clear_shelf()
+    assert banker.balance == 100
+    assert banker.shelved == 0
+
+
+def test_clear_shelf_1():
+    banker = Banker()
+    banker.shelf(1010)
+    banker.bank()
+    banker.shelf(5000)
+    banker.clear_shelf()
+    assert banker.balance == 1010
+    assert banker.shelved == 0
