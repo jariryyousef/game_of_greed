@@ -1,10 +1,12 @@
 # game-of-greed-V1
 
-<!-- ## Description
+Description
 
-* This program simulates Mad Libs game which is a typical word game that consists of one player who asks the others for a list of words to fill in the blanks in the story before reading out loud. -->
+<!-- * This program simulates Mad Libs game which is a typical word game that consists of one player who asks the others for a list of words to fill in the blanks in the story before reading out loud.  -->
 
-## **Live PR URL** [link](https://github.com/jariryyousef/game_of_greed/pull/1)
+## **Live PR URL** [link1](https://github.com/jariryyousef/game_of_greed/pull/1)
+
+## **Live PR URL** [link2](https://github.com/jariryyousef/game_of_greed/pull/2)
 
 ## Requirment
 
@@ -29,6 +31,10 @@ python -m Modules_and_Testing.math_series
 - Aseel Al-Saqer
 - Haneen Hashlmoun
 - Yousef Jariri
+
+## Algorithm :
+
+<img src = "Game of Greed.jpg">
 
 ## This game-of-greed
 
