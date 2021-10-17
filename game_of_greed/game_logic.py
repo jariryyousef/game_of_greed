@@ -12,8 +12,10 @@ class Banker:
 
     def shelf(self, shelf):
         self.shelved += shelf
-        
 
-    # def banker(self, banker):
+    def bank(self):
+        self.balance = self.shelved
+        self.shelved = 0
+
 
 
