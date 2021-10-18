@@ -4,8 +4,6 @@ from typing import Counter
 
 
 class GameLogic:
-
-
     # def calculate_score(tuple :int):
     #     score=0
     #     count=Counter(tuple).most_common()
@@ -65,18 +63,18 @@ class GameLogic:
     #                         score += (j*4)*100
     #     return score
             
-    
+    @staticmethod
     def calculate_score(rolled):
         rolled = Counter(rolled)
         score = 0
         if len(rolled) == 6:
-            straight = all(value == 1 for value in rolled.values())
-            if straight:
-                score = 1500
+            for value in rolled.values():
+                if value == 1:
+                    score = 1500
         if len(rolled) == 3:
-            three_pairs = all(value == 2 for value in rolled.values())
-            if three_pairs:
-                score = 750 * 2 
+            for value in rolled.values():
+                if all(value == 2 for value in rolled.values()):
+                    score = 750 * 2 
         if score == 0:
             for number in rolled:
                 appears = rolled[number]
@@ -96,7 +94,6 @@ class GameLogic:
         return tuple(randint(1,6) for _ in range(0,num_dice))
 
 class Banker:
-
     """
         A class representing a BaseClass
 
@@ -126,7 +123,6 @@ class Banker:
         the clear_shelf method for the {Banker} class,
         will reset the amount of ({Banker} class shalved points) to the default value
     """
-
     def __init__(self, shelved=0, balance=0):
         self.balance = balance
         self.shelved = shelved
@@ -137,6 +133,7 @@ class Banker:
     def bank(self):
         self.balance = self.shelved
         self.shelved = 0
+        return 
 
     def clear_shelf(self):
         self.shelved = 0
