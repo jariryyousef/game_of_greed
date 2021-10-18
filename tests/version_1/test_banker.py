@@ -1,3 +1,7 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=invalid-name
+# pylint: disable=missing-function-docstring
+
 import pytest
 from game_of_greed.game_logic import Banker
 
@@ -8,17 +12,17 @@ def test_banker():
     assert Banker()
 
 
-# def test_new_banker():
-#     banker = Banker()
-#     assert banker.balance == 0
-#     assert banker.shelved == 0
+def test_new_banker():
+    banker = Banker()
+    assert banker.balance == 0
+    assert banker.shelved == 0
 
 
-# def test_shelf():
-#     banker = Banker()
-#     banker.shelf(100)
-#     assert banker.shelved == 100
-#     assert banker.balance == 0
+def test_shelf():
+    banker = Banker()
+    banker.shelf(100)
+    assert banker.shelved == 100
+    assert banker.balance == 0
 
 
 def test_shelf_1():

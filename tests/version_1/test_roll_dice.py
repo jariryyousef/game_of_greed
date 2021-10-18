@@ -1,3 +1,7 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=invalid-name
+# pylint: disable=missing-function-docstring
+
 """
 - Handle rolling dice
 - Add `roll_dice` static method to GameLogic class.

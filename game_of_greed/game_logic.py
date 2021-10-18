@@ -1,5 +1,9 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=invalid-name
+# pylint: disable=missing-function-docstring
+
 # from collections import Counter
-from random import randint ,sample
+from random import randint
 from typing import Counter
 
 
@@ -62,7 +66,6 @@ class GameLogic:
     #                     if count[j][1] == 6:
     #                         score += (j*4)*100
     #     return score
-            
     @staticmethod
     def calculate_score(rolled):
         rolled = Counter(rolled)
@@ -74,7 +77,7 @@ class GameLogic:
         if len(rolled) == 3:
             for value in rolled.values():
                 if all(value == 2 for value in rolled.values()):
-                    score = 750 * 2 
+                    score = 750 * 2
         if score == 0:
             for number in rolled:
                 appears = rolled[number]
@@ -89,11 +92,14 @@ class GameLogic:
                     if number == 5:
                         score += 50*appears
         return score
+
     @staticmethod
     def roll_dice(num_dice):
-        return tuple(randint(1,6) for _ in range(0,num_dice))
+        return tuple(randint(1, 6) for _ in range(0, num_dice))
+
 
 class Banker:
+
     """
         A class representing a BaseClass
 
@@ -123,17 +129,20 @@ class Banker:
         the clear_shelf method for the {Banker} class,
         will reset the amount of ({Banker} class shalved points) to the default value
     """
+
     def __init__(self, shelved=0, balance=0):
         self.balance = balance
         self.shelved = shelved
 
     def shelf(self, shelf):
         self.shelved += shelf
+        return self.shelved
 
     def bank(self):
         self.balance = self.shelved
         self.shelved = 0
-        return 
+        return self.shelved, self.balance
 
     def clear_shelf(self):
         self.shelved = 0
+        return self.shelved
