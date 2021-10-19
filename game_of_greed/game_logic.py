@@ -135,10 +135,12 @@ class Banker:
         return self.shelved
 
     def bank(self):
-        self.balance = self.shelved
+        self.balance += self.shelved
         self.shelved = 0
         return self.shelved, self.balance
 
     def clear_shelf(self):
         self.shelved = 0
         return self.shelved
+
+
