@@ -24,6 +24,32 @@ class Game:
         else:
             print("just answer the question")
 
+    def start_game(self):
+        # dice_left == 6
+        self.fake_dice_roll()
+        if self.round_counter < 2:
+            print("Enter dice to keep, or (q)uit:")
+            quit_or_play_again = input("> ")
+            if quit_or_play_again == "q":
+                print("Thanks for playing. You earned {} points".format(self.balance))
+                quit()
+            else:
+                self.repetitive_gameplay(quit_or_play_again)
+        else:
+            print("Enter dice to keep, or (q)uit:")
+
+    def fake_dice_roll(self, dice=6):
+        roll = self.roller(dice)
+        self.round_counter += 1
+        self.dice_left = 6
+        print("Starting round {}".format(self.round_counter))
+        string_dice = ""
+        for dice in roll:
+            string_dice += "{} ".format(str(dice))
+        print("Rolling {} dice...".format(self.dice_left))
+        print("*** {}***".format(string_dice))
+        return roll
+
     def repetitive_gameplay(self, saved_dice):
         self.saved_dice = saved_dice
         dice_list = [int(x) for x in str(saved_dice)]
@@ -76,6 +102,11 @@ class Game:
             dice_kept = input("> ")
             print("Thanks for playing. You earned {} points".format(self.balance))
 
+    def ask_to_play_again(self):
+        print(
+            "You have {} unbanked points and {} dice remaining".format(self.shelved, self.dice_left))
+        print("(r)oll again, (b)ank your points or (q)uit:")
+
     def fake_dice_roll_2(self, dice=6,):
         roller = GameLogic.roll_dice
         self.round_counter += 1
@@ -95,37 +126,7 @@ class Game:
             "You banked {} points in round {}".format(shelved_this_round, self.round_counter))
         print("Total score is {} points".format(self.balance))
 
-    def ask_to_play_again(self):
-        print(
-            "You have {} unbanked points and {} dice remaining".format(self.shelved, self.dice_left))
-        print("(r)oll again, (b)ank your points or (q)uit:")
 
-    def fake_dice_roll(self, dice=6):
-        roll = self.roller(dice)
-        self.round_counter += 1
-        self.dice_left = 6
-        print("Starting round {}".format(self.round_counter))
-        string_dice = ""
-        for dice in roll:
-            string_dice += "{} ".format(str(dice))
-        print("Rolling {} dice...".format(self.dice_left))
-        print("*** {}***".format(string_dice))
-        # return roll
-
-    def start_game(self):
-
-        # dice_left == 6
-        self.fake_dice_roll()
-        if self.round_counter < 2:
-            print("Enter dice to keep, or (q)uit:")
-            quit_or_play_again = input("> ")
-            if quit_or_play_again == "q":
-                print("Thanks for playing. You earned {} points".format(self.balance))
-                quit()
-            else:
-                self.repetitive_gameplay(quit_or_play_again)
-        else:
-            print("Enter dice to keep, or (q)uit:")
 
 
 # q = Game()
