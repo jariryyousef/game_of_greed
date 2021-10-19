@@ -1,6 +1,4 @@
-# # pylint: disable=missing-module-docstring
-# # pylint: disable=invalid-name
-# # pylint: disable=missing-function-docstring
+
 
 # from game_of_greed import __version__
 

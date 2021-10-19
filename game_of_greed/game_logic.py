@@ -1,10 +1,6 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=invalid-name
-# pylint: disable=missing-function-docstring
 
-# from collections import Counter
+from collections import Counter
 from random import randint
-from typing import Counter
 
 
 class GameLogic:

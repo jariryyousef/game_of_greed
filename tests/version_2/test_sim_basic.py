@@ -1,6 +1,4 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=invalid-name
-# pylint: disable=missing-function-docstring
+
 
 import pytest
 from tests.flo import diff
