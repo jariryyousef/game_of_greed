@@ -93,6 +93,10 @@ class GameLogic:
     def roll_dice(num_dice):
         return tuple(randint(1, 6) for _ in range(0, num_dice))
 
+    def validate_keepers(roll, keepers):
+        # version_3
+
+        return not Counter(keepers) - Counter(roll)
 
 class Banker:
 
@@ -132,15 +136,14 @@ class Banker:
 
     def shelf(self, shelf):
         self.shelved += shelf
-        return self.shelved
+
 
     def bank(self):
+        deposited = self.shelved
         self.balance += self.shelved
         self.shelved = 0
-        return self.shelved, self.balance
+        return deposited
 
     def clear_shelf(self):
         self.shelved = 0
         return self.shelved
-
-
