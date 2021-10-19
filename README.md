@@ -12,9 +12,12 @@ ___
 
 ## **Live PR URL** [link3](https://github.com/jariryyousef/game_of_greed/pull/4)
 
+## **Live PR URL** [link4](https://github.com/jariryyousef/game_of_greed/pull/5)
 ---
 
 ## Feature Tasks
+
+*version 1 & 2*_______
 
  >[x] Application should implement all features from previous version
 
@@ -29,6 +32,19 @@ ___
 >[x] Application should keep track of current round
 
 >[x] Application should have automated tests to ensure proper operation
+
+*version 3*_______
+
+>[x] Application should implement features from versions 1 and 2
+
+>[x] Should handle setting aside scoring dice and continuing turn with remaining dice.
+Should handle when cheating occurs.
+ - >Or just typos.
+ - >**E.g.** roll = [1,3,5,2] and user selects 1, 1, 1, 1, 1, 1
+
+>[x] Should allow user to continue rolling with 6 new dice when all dice have scored in current turn.
+
+>[x] Handle **zilch** No points for round, and round is over
 
 ## Requirment
 
