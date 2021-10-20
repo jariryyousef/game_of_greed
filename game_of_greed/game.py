@@ -79,7 +79,7 @@ class Game:
 
                 self.quit_game()
 
-                return
+            
 
             elif roll_again_response == "b":
 
