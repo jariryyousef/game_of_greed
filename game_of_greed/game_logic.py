@@ -97,6 +97,20 @@ class GameLogic:
         # version_3
 
         return not Counter(keepers) - Counter(roll)
+    
+    @staticmethod
+    def get_scorers(dices_frome_bot_roller):
+        # version_4
+        dice_scoreable = GameLogic.calculate_score(dices_frome_bot_roller)
+        if dice_scoreable == 0:
+            return tuple()
+        scorers = []
+        for i in range(len(dices_frome_bot_roller)):
+            sub_roll = dices_frome_bot_roller[:i] + dices_frome_bot_roller[i + 1:]
+            sub_score = GameLogic.calculate_score(sub_roll)
+            if sub_score != dice_scoreable:
+                scorers.append(dices_frome_bot_roller[i])
+        return tuple(scorers)
 
 class Banker:
 
