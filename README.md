@@ -13,38 +13,48 @@ ___
 ## **Live PR URL** [link3](https://github.com/jariryyousef/game_of_greed/pull/4)
 
 ## **Live PR URL** [link4](https://github.com/jariryyousef/game_of_greed/pull/5)
+
+## **Live PR URL** [link5](https://github.com/jariryyousef/game_of_greed/pull/6)
 ---
 
 ## Feature Tasks
 
 *version 1 & 2*_______
 
- >[x] Application should implement all features from previous version
+> [x] Application should implement all features from previous version
 
->[x] Application should simulate rolling between 1 and 6 dice
+> [x] Application should simulate rolling between 1 and 6 dice
 
->[x] Application should allow user to set aside dice each roll
+> [x] Application should allow user to set aside dice each roll
 
->[x] Application should allow “banking” current score or rolling again.
+> [x] Application should allow “banking” current score or rolling again.
 
->[x] Application should keep track of total score
+> [x] Application should keep track of total score
 
->[x] Application should keep track of current round
+> [x] Application should keep track of current round
 
->[x] Application should have automated tests to ensure proper operation
+> [x] Application should have automated tests to ensure proper operation
 
 *version 3*_______
 
->[x] Application should implement features from versions 1 and 2
+> [x] Application should implement features from versions 1 and 2
 
->[x] Should handle setting aside scoring dice and continuing turn with remaining dice.
+> [x] Should handle setting aside scoring dice and continuing turn with remaining dice.
 Should handle when cheating occurs.
  - >Or just typos.
  - >**E.g.** roll = [1,3,5,2] and user selects 1, 1, 1, 1, 1, 1
 
->[x] Should allow user to continue rolling with 6 new dice when all dice have scored in current turn.
+> [x] Should allow user to continue rolling with 6 new dice when all dice have scored in current turn.
 
->[x] Handle **zilch** No points for round, and round is over
+> [x] Handle **zilch** No points for round, and round is over
+
+*version 4 & last*_______
+
+> [x] Create an AI Bot to play Game of Greed
+
+> [x] User should be able to see your bot play by executing Bots from terminal.
+
+> [x] Application should implement features from previous classes
 
 ## Requirment
 
@@ -91,19 +101,19 @@ python -m Modules_and_Testing.math_series
   
   [x] Define a Banker class
   
-  [x]Add a shelf instance method
+  [x] Add a shelf instance method
   
-  [x]Input to shelf is the amount of points (integer) to add to shelf.
+  [x] Input to shelf is the amount of points (integer) to add to shelf.
   
-  [x]shelf should temporarily store unbanked points.
+  [x] shelf should temporarily store unbanked points.
   Add a bank instance method:
   
-  [x]bank should add any points on the shelf to total and reset shelf to 0.
+  [x] bank should add any points on the shelf to total and reset shelf to 0.
   
-  [x]bank output should be the amount of points added to total from shelf.
+  [x] bank output should be the amount of points added to total from shelf.
   Add a clear_shelf instance method:
   
-  [x]clear_shelf should remove all unbanked points
+  [x] clear_shelf should remove all unbanked points
 
 ## Testing Details
 
